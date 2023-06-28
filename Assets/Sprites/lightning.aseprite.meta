@@ -126,7 +126,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 148
+      x: 171
       y: 4
       width: 32
       height: 144
@@ -138,7 +138,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 148, y: 4}
+    uvTransform: {x: 171, y: 4}
   - name: lightning_Frame_1
     originalName: 
     pivot: {x: 0.515625, y: -0.20192307}
@@ -146,7 +146,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 76
+      x: 99
       y: 4
       width: 64
       height: 208
@@ -158,17 +158,17 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 54, y: -38}
+    uvTransform: {x: 99, y: 4}
   - name: lightning_Frame_2
     originalName: 
-    pivot: {x: 0.59375, y: -0.020833332}
+    pivot: {x: 0.43678162, y: -0.020833332}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 64
+      width: 87
       height: 240
     spriteID: df13cc4dce322e544b8bcda10d503a03
     spriteBone: []
@@ -178,7 +178,7 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: -13, y: -1}
+    uvTransform: {x: 4, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -199,18 +199,18 @@ ScriptedImporter:
     - name: lightning_Frame_1
       frameIndex: 1
       cellRect:
-        x: 0
-        y: 0
-        width: 110
-        height: 254
+        x: 22
+        y: 42
+        width: 64
+        height: 208
       spriteId: 9ed6600c11a112a4eaf67bb48ffe3650
     - name: lightning_Frame_2
       frameIndex: 2
       cellRect:
-        x: 0
-        y: 0
-        width: 110
-        height: 254
+        x: 17
+        y: 5
+        width: 87
+        height: 240
       spriteId: df13cc4dce322e544b8bcda10d503a03
     linkedCells: []
     parentIndex: -1

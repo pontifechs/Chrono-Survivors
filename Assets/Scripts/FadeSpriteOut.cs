@@ -4,10 +4,25 @@ using UnityEngine;
 
 public class FadeSpriteOut : MonoBehaviour
 {
-
+    [SerializeField] bool onStart;
     [SerializeField] float duration;
 
-    void Start()
+    private void Awake()
+    {
+        if (onStart)
+        {
+            StartFadeout();
+        }
+
+        // TODO:: Move somewhere else.
+        var hasHealth = GetComponent<HasHealth>(); 
+        if (hasHealth)
+        {
+            hasHealth.OnDeath += StartFadeout;
+        }
+    }
+
+    void StartFadeout()
     {
         var spriteRenderer = GetComponent<SpriteRenderer>();
         StartCoroutine(FadeOut(spriteRenderer));
@@ -23,7 +38,9 @@ public class FadeSpriteOut : MonoBehaviour
             yield return null;    
         }
 
-        spriteRenderer.color = c; 
+        spriteRenderer.color = c;
+
+        Destroy(gameObject);
     }
 
 }

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class HasHealth : MonoBehaviour
 {
-    [SerializeField] float maxHealth;
+    [SerializeField] float maxHealth = 1;
 
     private float currentHealth;
 
@@ -17,10 +17,12 @@ public class HasHealth : MonoBehaviour
 
     public void TakeDamage(float dmg)
     {
+        Debug.Log("ow");
         OnTakeDamage?.Invoke(dmg);
         currentHealth -= dmg;
         if (currentHealth <= 0)
         {
+            Debug.Log("die");
             OnDeath?.Invoke();
         }
     }

@@ -17,7 +17,7 @@ public class DumbSeekingEnemy : MonoBehaviour
     void Start()
     {
         // TODO:: how to get this smarter
-        target = GameObject.Find("crono").transform;
+        target = GameObject.Find("Player").transform;
     }
 
     void Update()

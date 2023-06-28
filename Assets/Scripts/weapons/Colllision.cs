@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeleeEnemy : MonoBehaviour
+public class Collision : MonoBehaviour
 {
-    // TODO:: Rename?
+    // TODO:: Rename? -- or do something smarter?
     [SerializeField] int dmgIcd;
     [SerializeField] float dmg;
 
@@ -21,7 +21,7 @@ public class MeleeEnemy : MonoBehaviour
         target = null;
     }
 
-
+   
     private void FixedUpdate()
     {
         if (target != null)
