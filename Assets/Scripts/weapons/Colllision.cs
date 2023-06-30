@@ -6,7 +6,7 @@ public class Collision : MonoBehaviour
 {
     // TODO:: Rename? -- or do something smarter?
     [SerializeField] int dmgIcd;
-    [SerializeField] float dmg;
+    [SerializeField] int dmg;
 
     private HasHealth target;
     private int remainingIcd = 0;

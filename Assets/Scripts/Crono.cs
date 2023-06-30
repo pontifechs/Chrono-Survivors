@@ -96,7 +96,7 @@ public class Crono : MonoBehaviour
     }
 
 
-    private void takeDamage(float dmg)
+    private void takeDamage(int dmg)
     {
         // TODO:: flash red? Animation?
         Debug.Log("ow: " + dmg);

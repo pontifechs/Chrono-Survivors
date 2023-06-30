@@ -9,7 +9,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         // TODO:: make this smarter
-        InvokeRepeating("SpawnBlob", 0, 5f);
+        InvokeRepeating("SpawnBlob", 0, 1f);
     }
 
 

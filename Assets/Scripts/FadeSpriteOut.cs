@@ -22,7 +22,7 @@ public class FadeSpriteOut : MonoBehaviour
         }
     }
 
-    void StartFadeout()
+    public void StartFadeout()
     {
         var spriteRenderer = GetComponent<SpriteRenderer>();
         StartCoroutine(FadeOut(spriteRenderer));

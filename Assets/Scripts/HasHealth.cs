@@ -3,26 +3,34 @@ using UnityEngine;
 
 public class HasHealth : MonoBehaviour
 {
-    [SerializeField] float maxHealth = 1;
+    [SerializeField] int maxHealth = 1;
 
-    private float currentHealth;
+    private int currentHealth;
 
-    public event Action<float> OnTakeDamage;
+    public event Action<int> OnTakeDamage;
     public event Action OnDeath;
+
+    private HealthBar healthBar;
 
     void Awake()
     {
         currentHealth = maxHealth;
+
+        healthBar = GetComponentInChildren<HealthBar>();
     }
 
-    public void TakeDamage(float dmg)
+    public void TakeDamage(int dmg)
     {
-        Debug.Log("ow");
         OnTakeDamage?.Invoke(dmg);
         currentHealth -= dmg;
+
+        if (healthBar)
+        {
+            healthBar.SetHealth(currentHealth / (float) maxHealth);
+        }
+
         if (currentHealth <= 0)
         {
-            Debug.Log("die");
             OnDeath?.Invoke();
         }
     }

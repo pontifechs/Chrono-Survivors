@@ -4,7 +4,7 @@ using UnityEngine.Rendering.Universal;
 public class Lightning : MonoBehaviour
 {
     [SerializeField] float size = 5.0f;
-    [SerializeField] float dmg = 1.0f;
+    [SerializeField] int dmg = 1;
     [SerializeField] GameObject lightningPrefab;
 
     void Start()

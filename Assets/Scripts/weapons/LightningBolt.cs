@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class LightningBolt : MonoBehaviour
 {
-    [SerializeField] public float dmg;
+    [SerializeField] public int dmg;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("hit");
         collider.GetComponent<HasHealth>().TakeDamage(dmg);
     }
 }
