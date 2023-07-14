@@ -1,17 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class Spawner : MonoBehaviour
+public class Spawner : Repeating
 {
     [SerializeField] GameObject blobPrefab;
-
-    void Start()
+    protected override void Repeat()
     {
-        // TODO:: make this smarter
-        InvokeRepeating("SpawnBlob", 0, 1f);
+        SpawnBlob();
     }
-
 
     void SpawnBlob()
     {
@@ -31,9 +27,15 @@ public class Spawner : MonoBehaviour
             position = new Vector2(Random.Range(origin.x, max.x), origin.y - 10);   
         }
 
-        var obj = GameObject.Instantiate(blobPrefab, position, Quaternion.identity);
-
-         
+        Instantiate(blobPrefab, position, Quaternion.identity);
     }
 
+    public void OnToggleSpawn(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("toggling: " + enabled);
+            enabled = !enabled;
+        }
+    }
 }

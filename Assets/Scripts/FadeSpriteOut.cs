@@ -1,5 +1,4 @@
 using System.Collections;
-using UnityEditor.U2D.Aseprite;
 using UnityEngine;
 
 public class FadeSpriteOut : MonoBehaviour
@@ -14,7 +13,7 @@ public class FadeSpriteOut : MonoBehaviour
             StartFadeout();
         }
 
-        // TODO:: Move somewhere else.
+        // TODO:: Move somewhere else. (T + 6-8 days) ya..... this reeks.
         var hasHealth = GetComponent<HasHealth>(); 
         if (hasHealth)
         {

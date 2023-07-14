@@ -13,6 +13,33 @@
                     "processors": "NormalizeVector2",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "toggleKnife",
+                    "type": "Button",
+                    "id": "4d0624b7-d285-43aa-810f-82371913e4c8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "toggleLightning",
+                    "type": "Button",
+                    "id": "ce118927-e4ee-4280-b8c8-39b6a16ecbbb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "toggleFlame",
+                    "type": "Button",
+                    "id": "1a21992b-68f0-431d-a3ae-ddb878826b70",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -81,6 +108,67 @@
                     "action": "move",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "c71d6869-b0e1-4a1b-83b1-89644205c533",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "toggleKnife",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6cb74991-53a5-4f0e-9af3-9e28ca5bc26d",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "toggleLightning",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ad427d65-fcef-4221-9d89-a42a35ace3d9",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "toggleFlame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "poke",
+            "id": "d4efe75d-c671-4c1e-a3b9-695fa8dd3ab4",
+            "actions": [
+                {
+                    "name": "toggleSpawn",
+                    "type": "Button",
+                    "id": "80d22c9e-17cb-4e20-aee3-56d15f84d9b6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a0c77edd-547d-4cb5-af3d-82f40996e7a2",
+                    "path": "<Keyboard>/t",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "toggleSpawn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

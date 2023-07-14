@@ -490,17 +490,17 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_ComponentVersion: 1
   m_AssetsPPU: 16
-  m_RefResolutionX: 320
-  m_RefResolutionY: 180
+  m_RefResolutionX: 640
+  m_RefResolutionY: 360
   m_CropFrame: 0
-  m_GridSnapping: 0
+  m_GridSnapping: 2
   m_FilterMode: 0
   m_UpscaleRT: 0
   m_PixelSnapping: 0
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 689879819}
   - component: {fileID: 689879820}
   m_Layer: 0
-  m_Name: Light 2D
+  m_Name: Global
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.99
+  m_Intensity: 0.34
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: ff02abfa00000000d7a7ff3a
@@ -654,7 +654,7 @@ GameObject:
   - component: {fileID: 917731875}
   - component: {fileID: 917731874}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Healthbar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1067,166 +1067,76 @@ Tilemap:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578852785}
   m_Enabled: 1
-  m_Tiles:
-  - first: {x: 4, y: -3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 1
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 6, y: -3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 10
-      m_TileSpriteIndex: 10
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 4, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 2
-      m_TileSpriteIndex: 2
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 6, y: -2, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 4, y: -1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 9
-      m_TileSpriteIndex: 9
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 6, y: -1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 5
-      m_TileSpriteIndex: 5
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 4, y: 0, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 8
-      m_TileSpriteIndex: 8
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 5, y: 0, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 7
-      m_TileSpriteIndex: 7
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 6, y: 0, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 6
-      m_TileSpriteIndex: 6
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
+  m_Tiles: {}
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: de870ea61a4effc4ebe90d760c99911a, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 76400d7a85c2ffb479fa582caf381397, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 02e4a89201f51af48a273e3be4e0a090, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: f123dc78dbc9af542a7d96981f5a31d8, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 19abcd79de2ea254f8d04a40ff528375, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: dbf95b3d56bde9c4db90c3f5aa34dc96, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: f712d5fba6314b84ebbca1bde63a9c7d, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 66e53beb12a8acc449ffa78c55c75365, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: e0532d5faad180b4b87af421482dc8a7, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 1793988018, guid: 41e85ad6ace67ec4db58c4d0784a9bbb, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -105976952, guid: 41e85ad6ace67ec4db58c4d0784a9bbb, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 15018887, guid: 41e85ad6ace67ec4db58c4d0784a9bbb, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 431704619, guid: 41e85ad6ace67ec4db58c4d0784a9bbb, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 235479628, guid: 41e85ad6ace67ec4db58c4d0784a9bbb, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -571398560, guid: 41e85ad6ace67ec4db58c4d0784a9bbb, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1401592287, guid: 41e85ad6ace67ec4db58c4d0784a9bbb, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 1031308493, guid: 41e85ad6ace67ec4db58c4d0784a9bbb, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 212728756, guid: 41e85ad6ace67ec4db58c4d0784a9bbb, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
-  - m_RefCount: 9
+  - m_RefCount: 0
     m_Data:
-      e00: 1
+      e00: 3.2347063e-18
       e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
+      e02: -3.5236612e-19
+      e03: -3.5236612e-19
+      e10: 3.43e-43
+      e11: 0
+      e12: 7.74e-43
+      e13: 7.74e-43
+      e20: -5.1250987e+35
+      e21: -7.715509e+22
+      e22: 1.3833078e-28
+      e23: 2.688314e-29
+      e30: 4.5905e-41
+      e31: 7.76e-43
+      e32: 7.75e-43
+      e33: 7.78e-43
   m_TileColorArray:
-  - m_RefCount: 9
-    m_Data: {r: 1, g: 1, b: 1, a: 1}
+  - m_RefCount: 0
+    m_Data: {r: 4.2636e-41, g: 4.2636e-41, b: 4.2636e-41, a: 4.2636e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1325,63 +1235,9 @@ CompositeCollider2D:
   m_EdgeRadius: 0
   m_ColliderPaths:
   - m_Collider: {fileID: 1578852789}
-    m_ColliderPaths:
-    - - X: 70000000
-        Y: 2500000
-      - X: 62500000
-        Y: 10000000
-      - X: 46875000
-        Y: 10000000
-      - X: 40000000
-        Y: 3125000
-      - X: 40000000
-        Y: -20000000
-      - X: 43125000
-        Y: -26875000
-      - X: 50000000
-        Y: -30000000
-      - X: 50000000
-        Y: -18125000
-      - X: 43750000
-        Y: -16250000
-      - X: 42500000
-        Y: -10000000
-      - X: 42500000
-        Y: 0
-      - X: 50000000
-        Y: 8125000
-      - X: 60000000
-        Y: 8125000
-      - X: 68125000
-        Y: 0
-      - X: 68125000
-        Y: -10000000
-      - X: 60000000
-        Y: -17500000
-      - X: 60000000
-        Y: -30000000
-      - X: 70000000
-        Y: -30000000
+    m_ColliderPaths: []
   m_CompositePaths:
-    m_Paths:
-    - - {x: 6.9999704, y: -3}
-      - {x: 6.999992, y: 0.2500076}
-      - {x: 6.2499895, y: 1}
-      - {x: 4.6874924, y: 0.99999243}
-      - {x: 4, y: 0.3124892}
-      - {x: 4.0000024, y: -2.0000048}
-      - {x: 4.312509, y: -2.687504}
-      - {x: 5, y: -2.9999497}
-      - {x: 4.99998, y: -1.812494}
-      - {x: 4.3749967, y: -1.6249841}
-      - {x: 4.25, y: -0.9999981}
-      - {x: 4.2500067, y: 0.0000077}
-      - {x: 5.0000114, y: 0.8125}
-      - {x: 6.000007, y: 0.8124925}
-      - {x: 6.8125, y: -0.0000108}
-      - {x: 6.8124914, y: -1.0000079}
-      - {x: 6, y: -1.7500114}
-      - {x: 6.000029, y: -3}
+    m_Paths: []
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -1515,6 +1371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1715173179}
   - component: {fileID: 1715173178}
+  - component: {fileID: 1715173180}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -1529,11 +1386,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1715173177}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c88f15c2bed18c4f994e77cfa10b442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frequency: 1
   blobPrefab: {fileID: 6550317243645945820, guid: 38df254b3099317449b4509b1220c1f7, type: 3}
 --- !u!4 &1715173179
 Transform:
@@ -1550,6 +1408,68 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1715173180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715173177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: e7e9f7c58bfa9b94da44d7557051b4a8, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e77cbd76-b6b0-4fd5-b22e-1ddaddd7052f
+    m_ActionName: gameplay/move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1715173178}
+        m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
+        m_MethodName: OnToggleSpawn
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 80d22c9e-17cb-4e20-aee3-56d15f84d9b6
+    m_ActionName: poke/toggleSpawn[/Keyboard/t]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0c6aa627-a485-499a-bb75-2685d3394248
+    m_ActionName: poke/toggleKnife[/Keyboard/k]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2a32e780-6b1e-4f12-8c14-2f4f71acef88
+    m_ActionName: poke/toggleLightning[/Keyboard/l]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b68b8b96-6d4b-477d-b254-d676d1eb0321
+    m_ActionName: poke/toggleFlame[/Keyboard/f]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: poke
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1724507143
 GameObject:
   m_ObjectHideFlags: 0
@@ -1676,6 +1596,8 @@ GameObject:
   - component: {fileID: 1933428155}
   - component: {fileID: 1933428156}
   - component: {fileID: 1933428157}
+  - component: {fileID: 1933428158}
+  - component: {fileID: 1933428159}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -1813,6 +1735,58 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: e77cbd76-b6b0-4fd5-b22e-1ddaddd7052f
     m_ActionName: gameplay/move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 80d22c9e-17cb-4e20-aee3-56d15f84d9b6
+    m_ActionName: poke/toggleSpawn[/Keyboard/t]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1933428152}
+        m_TargetAssemblyTypeName: Crono, Assembly-CSharp
+        m_MethodName: OnToggleKnife
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 4d0624b7-d285-43aa-810f-82371913e4c8
+    m_ActionName: gameplay/toggleKnife[/Keyboard/k]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1933428152}
+        m_TargetAssemblyTypeName: Crono, Assembly-CSharp
+        m_MethodName: OnToggleLightning
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ce118927-e4ee-4280-b8c8-39b6a16ecbbb
+    m_ActionName: gameplay/toggleLightning[/Keyboard/l]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1933428152}
+        m_TargetAssemblyTypeName: Crono, Assembly-CSharp
+        m_MethodName: OnToggleFlame
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1a21992b-68f0-431d-a3ae-ddb878826b70
+    m_ActionName: gameplay/toggleFlame[/Keyboard/f]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: gameplay
@@ -1926,14 +1900,48 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933428147}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34f963946ea2fe84b98fe07af2926cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frequency: 1
   size: 5
   dmg: 1
   lightningPrefab: {fileID: 8728269215512639602, guid: 1f54f5cb0efff9445bb3b8d99004e8a0, type: 3}
+--- !u!114 &1933428158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933428147}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0661e933e5d50964e89373a6db05c25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frequency: 2
+  dmg: 2
+  speed: 0.75
+  knifePrefab: {fileID: 6029413968892875292, guid: 229cbd7e1cfef924eb9d3ed5334154c6, type: 3}
+--- !u!114 &1933428159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933428147}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02b5dbd2b734d9246b1e578936f5cc75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbiterPrefab: {fileID: 8788410946441140653, guid: 0f7be71502403e94b90c25b7c501d558, type: 3}
+  numOrbiters: 5
+  orbitRadius: 3
+  orbitSpeed: 5
+  dmg: 3
 --- !u!1 &2122647406
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,6 +2147,70 @@ PrefabInstance:
     - target: {fileID: 347554691799200894, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
       propertyPath: m_RenderingLayerMask
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710044971980332721, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: 25e598be-54c5-4eb0-85a1-09017d5e1412
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710044971980332721, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710044971980332721, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710044971980332721, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710044971980332721, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710044971980332721, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710044971980332721, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710044971980332721, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnToggleKnife
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710044971980332721, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnToggleLightning
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710044971980332721, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnToggleFlame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710044971980332721, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Crono, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710044971980332721, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Crono, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710044971980332721, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Crono, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710044971980332721, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710044971980332721, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710044971980332721, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5307880262768531687, guid: 5f33c2c9ed7bc20458d7504aa3169447, type: 3}
       propertyPath: speed

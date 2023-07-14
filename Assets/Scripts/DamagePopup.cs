@@ -18,11 +18,11 @@ public class DamagePopup : MonoBehaviour
 
     void PopFloatingText(int dmg)
     {
-        var text = GameObject.Instantiate(floatingTextPrefab, transform.position, Quaternion.identity);
+        var text = Instantiate(floatingTextPrefab, transform.position, Quaternion.identity);
         var textComponent = text.GetComponentInChildren<TextMeshProUGUI>();
         textComponent.alpha = 1;
         textComponent.text = dmg.ToString();
         textComponent.CrossFadeAlpha(0, .5f, false);
+        Destroy(text, 1);
     }
-
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace terrain
@@ -9,13 +10,13 @@ namespace terrain
         private const int Padding = 1;
         
         private Grid grid;
-        private LoadedTerrain[] loadees;
+        private List<LoadedTerrain> loadees;
         private static HashSet<(int, int)> loaded = new();
         
         private void Awake()
         {
             grid = GetComponent<Grid>();
-            loadees = GetComponentsInChildren<LoadedTerrain>();
+            loadees = GetComponentsInChildren<LoadedTerrain>().ToList();
         }
        
            

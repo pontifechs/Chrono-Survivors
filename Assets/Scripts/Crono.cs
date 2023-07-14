@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using weapons;
 
+// TODO:: Do more of this. Seems useful.
 [RequireComponent(typeof (HasHealth))]
 public class Crono : MonoBehaviour
 {
@@ -99,7 +101,7 @@ public class Crono : MonoBehaviour
     private void takeDamage(int dmg)
     {
         // TODO:: flash red? Animation?
-        Debug.Log("ow: " + dmg);
+        // Debug.Log("ow: " + dmg);
     }
 
     private void die()
@@ -108,4 +110,29 @@ public class Crono : MonoBehaviour
         spriteRenderer.color = new Color(1, 0, 0);
     }
 
+    public void OnToggleFlame(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        
+        Debug.Log("toggle flame");
+        var flame = GetComponent<FlameOrbit>();
+        flame.enabled = !flame.enabled;
+        // smile -- won't work.           
+    }
+    
+    public void OnToggleKnife(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        
+        var knife = GetComponent<Knife>();
+        knife.enabled = !knife.enabled;
+    }
+    
+    public void OnToggleLightning(InputAction.CallbackContext context)
+    {
+        if (!context.performed) return;
+        
+        var lightning = GetComponent<Lightning>();
+        lightning.enabled = !lightning.enabled;
+    }
 }

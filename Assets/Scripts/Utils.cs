@@ -14,11 +14,9 @@ static class Utils
         return Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
     }
     
-    public static Rect ScreenBounds_World()
+    public static (Vector2 min, Vector2 max) ScreenBounds_World()
     {
-        var min = ScreenMin_World();
-        var max = ScreenMax_World();
-        return Rect.MinMaxRect(min.x, min.y, max.x, max.y);
+        return (ScreenMin_World(), ScreenMax_World());
     }
 
     public static bool flipCoin()
@@ -33,6 +31,11 @@ static class Utils
             return default(T);
         }
         return collection[Random.Range(0, collection.Count)];
+    }
+
+    public static Vector2 xy(this Vector3 source)
+    {
+        return new Vector2(source.x, source.y);
     }
 
 }

@@ -27,6 +27,7 @@ public class Horde : MonoBehaviour
         return visibleEnemies[Random.Range(0, visibleEnemies.Count)];
     } 
 
+    // TODO:: This isn't working right. -- At least Knife.cs isn't working right, and i suspect this.
     public static GameObject ClosestEnemy(Vector3 position)
     {
         GameObject min = null;
