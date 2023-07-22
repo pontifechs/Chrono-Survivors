@@ -1,4 +1,4 @@
-﻿namespace terrain
+﻿namespace Terrain
 {
     public interface LoadedTerrain
     {

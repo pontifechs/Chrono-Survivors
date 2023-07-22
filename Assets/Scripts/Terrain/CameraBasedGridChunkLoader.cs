@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-namespace terrain
+namespace Terrain
 {
     public class CameraBasedGridChunkLoader : MonoBehaviour
     {
@@ -15,10 +15,10 @@ namespace terrain
         
         private void Awake()
         {
+            loaded.Clear(); 
             grid = GetComponent<Grid>();
             loadees = GetComponentsInChildren<LoadedTerrain>().ToList();
         }
-       
            
         private (Vector2Int min, Vector2Int max) GetChunkBounds()
         {

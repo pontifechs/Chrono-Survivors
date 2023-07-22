@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-namespace weapons
+namespace Weapons
 {
     public class Lightning : Repeating
     {

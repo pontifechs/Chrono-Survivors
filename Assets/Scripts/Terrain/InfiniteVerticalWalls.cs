@@ -1,8 +1,7 @@
-using System;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace terrain
+namespace Terrain
 {
     public class InfiniteVerticalWalls : MonoBehaviour, LoadedTerrain
     {

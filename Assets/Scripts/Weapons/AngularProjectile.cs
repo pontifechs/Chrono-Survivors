@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace weapons
+namespace Weapons
 {
     public class AngularProjectile : MonoBehaviour
     {

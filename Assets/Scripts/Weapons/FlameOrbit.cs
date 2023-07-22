@@ -1,8 +1,7 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-namespace weapons
+namespace Weapons
 {
     public class FlameOrbit : MonoBehaviour
     {

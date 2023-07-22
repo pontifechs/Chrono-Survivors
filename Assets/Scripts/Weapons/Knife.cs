@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace weapons
+namespace Weapons
 {
     public class Knife : Repeating
     {

@@ -1,19 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using weapons;
+using UnityEngine.SceneManagement;
+using Weapons;
 
 // TODO:: Do more of this. Seems useful.
 [RequireComponent(typeof (HasHealth))]
 public class Crono : MonoBehaviour
 {
-    public float speed = 5f;
+    [SerializeField] float speed = 5f;
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidBody;
     private HasHealth hasHealth;
+
+    private bool alive = true;
+    
 
     enum Direction {
         Up, Down, Left, Right
@@ -23,6 +25,7 @@ public class Crono : MonoBehaviour
 
     private void Awake()
     {
+        alive = true;
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigidBody = GetComponent<Rigidbody2D>();
@@ -93,8 +96,17 @@ public class Crono : MonoBehaviour
 
     public void FixedUpdate()
     {
+        
         // TODO:: Blink
-        rigidBody.velocity = move * speed;
+        
+        if (alive)
+        {
+            rigidBody.velocity = move * speed;
+        }
+        else
+        {
+            rigidBody.velocity = new Vector2();
+        }
     }
 
 
@@ -106,8 +118,14 @@ public class Crono : MonoBehaviour
 
     private void die()
     {
-        // TODO:: disable movement.
         spriteRenderer.color = new Color(1, 0, 0);
+        alive = false;
+        Invoke(nameof(returnToMenu), 3); 
+    }
+
+    private void returnToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     public void OnToggleFlame(InputAction.CallbackContext context)

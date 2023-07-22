@@ -1,9 +1,8 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-namespace terrain
+namespace Terrain
 {
     public class InfiniteRandomFloor : MonoBehaviour, LoadedTerrain
     {
