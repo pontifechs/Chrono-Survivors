@@ -99,6 +99,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: c43aefac97779834891055a35e448997, type: 3}
       insertIndex: -1
       addedObject: {fileID: -2032949804701704156}
+    - targetCorrespondingSourceObject: {fileID: -2253911629886400664, guid: c43aefac97779834891055a35e448997, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8092418709244649683}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: c43aefac97779834891055a35e448997, type: 3}
 --- !u!1 &6550317243645945820 stripped
 GameObject:
@@ -259,3 +262,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   floatingTextPrefab: {fileID: 4329506660662016050, guid: 6c4ae0f7223155045a835541563df0ff, type: 3}
+--- !u!114 &8092418709244649683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6550317243645945820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0134180bf16f4089b632a37112fb129c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gem: {fileID: 3918670602390391404, guid: ac32bb4c5cfcfaf4a805a4509acd0903, type: 3}

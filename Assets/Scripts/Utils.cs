@@ -21,7 +21,7 @@ static class Utils
 
     public static bool flipCoin()
     {
-        return Random.Range(0, 1) == 0;
+        return Random.Range(0, 2) == 0;
     }
 
     public static T RandomElement<T>(this List<T> collection)

@@ -10,7 +10,7 @@ namespace Terrain
         private const int Padding = 1;
         
         private Grid grid;
-        private List<LoadedTerrain> loadees;
+        private List<LoadedTerrain> loadees = new();
         private static HashSet<(int, int)> loaded = new();
         
         private void Awake()
