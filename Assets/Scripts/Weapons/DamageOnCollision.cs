@@ -9,7 +9,7 @@ namespace Weapons
 
         private void OnTriggerEnter2D(Collider2D collider)
         {
-            var hasHealth = collider.GetComponent<HasHealth>();
+            var hasHealth = collider.GetComponent<Health.Health>();
             if (hasHealth)
             {
                 hasHealth.TakeDamage(dmg);   

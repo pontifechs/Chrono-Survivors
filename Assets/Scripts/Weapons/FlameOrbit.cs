@@ -10,7 +10,9 @@ namespace Weapons
         [SerializeField] private int numOrbiters = 3;
         [SerializeField] private float orbitRadius = 2.0f;
         [SerializeField] private float orbitSpeed = 5.0f;
-        [SerializeField] private int dmg = 3;        
+        [SerializeField] private int dmg = 3;
+        [SerializeField] private float duration;
+        [SerializeField] private float cooldown;
         
         private readonly List<GameObject> orbiters = new();
 

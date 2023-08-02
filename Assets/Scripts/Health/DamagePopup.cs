@@ -3,14 +3,14 @@ using UnityEngine;
 
 namespace Health
 {
-    [RequireComponent(typeof(HasHealth))]
+    [RequireComponent(typeof(Health))]
     public class DamagePopup : MonoBehaviour
     {
         [SerializeField] GameObject floatingTextPrefab;
 
         void Start()
         {
-            var hasHealth = GetComponent<HasHealth>();
+            var hasHealth = GetComponent<Health>();
             if (hasHealth)
             {
                 hasHealth.OnTakeDamage += PopFloatingText;

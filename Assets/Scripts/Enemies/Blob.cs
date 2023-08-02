@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Enemies
 {
-    [RequireComponent(typeof(HasHealth))]
+    [RequireComponent(typeof(Health.Health))]
     [RequireComponent(typeof(FadeSpriteOut))]
     public class Blob : MonoBehaviour
     {
@@ -13,7 +13,7 @@ namespace Enemies
         
         private void Awake()
         {
-            GetComponent<HasHealth>().OnDeath += die;
+            GetComponent<Health.Health>().OnDeath += die;
             fadeSpriteOut = GetComponent<FadeSpriteOut>();
         }
 

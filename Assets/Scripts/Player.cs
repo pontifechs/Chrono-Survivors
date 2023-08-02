@@ -5,17 +5,17 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using Weapons;
 
-[RequireComponent(typeof(HasHealth))]
+[RequireComponent(typeof(Health.Health))]
 [RequireComponent(typeof(Movement))]
 public class Player : MonoBehaviour
 {
-    private HasHealth hasHealth;
+    private Health.Health health;
     private Movement movement;
     
     private void Awake()
     {
-        hasHealth = GetComponent<HasHealth>();
-        hasHealth.OnDeath += die;
+        health = GetComponent<Health.Health>();
+        health.OnDeath += die;
         movement = GetComponent<Movement>();
     }
 

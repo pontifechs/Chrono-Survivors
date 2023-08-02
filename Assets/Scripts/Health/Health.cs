@@ -1,13 +1,15 @@
 using System;
+using Tunings;
 using UI;
 using UnityEngine;
 
 namespace Health
 {
-    public class HasHealth : MonoBehaviour
+    [RequireComponent(typeof(TuningReference))]
+    public class Health : MonoBehaviour
     {
-        [SerializeField] float maxHealth = 1;
 
+        private float maxHealth;
         private float currentHealth;
 
         public event Action<float> OnTakeDamage;
@@ -17,6 +19,7 @@ namespace Health
 
         void Awake()
         {
+            maxHealth = GetComponent<TuningReference>().Get<HasHealth>().MaxHealth();
             currentHealth = maxHealth;
 
             healthBar = GetComponentInChildren<SliderBar>();

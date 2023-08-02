@@ -11,6 +11,7 @@ public class Spawner : Repeating
 
     void SpawnBlob()
     {
+        // TODO:: This is currently spawning blobs out of bounds. need to think of some mechanism for the map and the spawner to communicate.
         var origin = Camera.main.ScreenToWorldPoint(new Vector2(0, 0));
         var max = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
 
@@ -34,7 +35,6 @@ public class Spawner : Repeating
     {
         if (context.performed)
         {
-            Debug.Log("toggling: " + enabled);
             enabled = !enabled;
         }
     }

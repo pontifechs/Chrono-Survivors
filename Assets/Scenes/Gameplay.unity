@@ -123,6 +123,73 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &185298160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 185298161}
+  - component: {fileID: 185298162}
+  m_Layer: 6
+  m_Name: PickupCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &185298161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185298160}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1933428150}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &185298162
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185298160}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1}
+  m_Size: {x: 5, y: 5}
+  m_Direction: 0
 --- !u!1 &293067990
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,7 +1057,7 @@ GameObject:
   - component: {fileID: 1061441974}
   - component: {fileID: 1061441973}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Level Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2058,6 +2125,8 @@ GameObject:
   - component: {fileID: 1933428159}
   - component: {fileID: 1933428161}
   - component: {fileID: 1933428160}
+  - component: {fileID: 1933428162}
+  - component: {fileID: 1933428163}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -2152,6 +2221,7 @@ Transform:
   m_Children:
   - {fileID: 917731877}
   - {fileID: 999293206}
+  - {fileID: 185298161}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2352,7 +2422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44bf5ada40fd1ad48b59a28c71a9133b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
 --- !u!114 &1933428157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2402,6 +2471,8 @@ MonoBehaviour:
   orbitRadius: 3
   orbitSpeed: 5
   dmg: 3
+  duration: 0
+  cooldown: 0
 --- !u!114 &1933428160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2426,7 +2497,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0dc14447aed4c2db29eeee4577b15a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+--- !u!114 &1933428162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933428147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e47ddbcd912d4485907f00c8fcd75905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xpBar: {fileID: 1271289106}
+  levelText: {fileID: 1061441973}
+--- !u!114 &1933428163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933428147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5027d6eb740a4d7a8ae4dfe52e48e5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tuning: {fileID: 11400000, guid: e134e4c5dedbdcd4b9416a47e71e5c4a, type: 2}
 --- !u!1 &2009249747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2566,7 +2663,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -30}
+  m_AnchoredPosition: {x: 0, y: -25}
   m_SizeDelta: {x: -40, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2122647406

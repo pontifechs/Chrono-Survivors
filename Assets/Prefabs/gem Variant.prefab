@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 1
+  itemZoom: {fileID: 11400000, guid: b11a35ea314c55143948c22dee37e6ac, type: 2}
 --- !u!4 &4290822863171707401 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 9a2b83d72d678a8408118b48de52b133, type: 3}

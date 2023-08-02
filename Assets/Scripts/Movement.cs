@@ -1,11 +1,12 @@
 ﻿using System;
+using Tunings;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
 {
-    [SerializeField] private float speed = 5;
+    private HasSpeed tuning;
 
     public Action<bool> OnMoveChanged;
     public Action<Direction> OnDirectionChanged;
@@ -21,6 +22,7 @@ public class Movement : MonoBehaviour
 
     private void Awake()
     {
+        tuning = GetComponent<TuningReference>().Get<HasSpeed>();
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
@@ -65,7 +67,7 @@ public class Movement : MonoBehaviour
     {
         if (enabled)
         {
-            rigidBody.velocity = move * speed;
+            rigidBody.velocity = move * tuning.Speed();
         }
         else
         {

@@ -9,12 +9,12 @@ namespace Weapons
         [SerializeField] int dmgIcd;
         [SerializeField] int dmg;
 
-        private HasHealth target;
+        private Health.Health target;
         private int remainingIcd = 0;
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            target = collision.gameObject.GetComponent<HasHealth>();
+            target = collision.gameObject.GetComponent<Health.Health>();
         }
 
         private void OnCollisionExit2D(Collision2D collision)

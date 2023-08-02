@@ -1,38 +1,38 @@
+using Tunings;
 using UnityEngine;
 
-public class DumbSeekingEnemy : MonoBehaviour
+namespace Enemies
 {
-    [SerializeField] float speed = 1;
-
-    Rigidbody2D rb;
-
-    Transform target;
-    Vector2 move;  
-
-    void Awake()
+    public class DumbSeeker : MonoBehaviour
     {
-        rb = GetComponent<Rigidbody2D>();
-    }
+        private HasSpeed tuning;
+        
+        Rigidbody2D rb;
 
-    void Start()
-    {
-        // TODO:: how to get this smarter
-        target = GameObject.Find("Player").transform;
-    }
+        Transform target;
+        Vector2 move;  
 
-    void Update()
-    {
-        if (target != null)
+        void Awake()
         {
-            move = (target.position - transform.position).normalized;
+            tuning = GetComponent<TuningReference>().Get<HasSpeed>(); 
+            rb = GetComponent<Rigidbody2D>();
+            target = GameObject.Find("Player").transform;
         }
-    }
 
-    void FixedUpdate()
-    {
-        if (target != null)
+        void Update()
         {
-            rb.velocity = move * speed;
+            if (target != null)
+            {
+                move = (target.position - transform.position).normalized;
+            }
+        }
+
+        void FixedUpdate()
+        {
+            if (target != null)
+            {
+                rb.velocity = move * tuning.Speed();
+            }
         }
     }
 }
